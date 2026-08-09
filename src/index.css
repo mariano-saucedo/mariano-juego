@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #020617; /* bg-slate-950 */
+    color: #f8fafc;
+  }
+}
+
+/* Gamified Buttons & Bento Card Effects */
+.btn-game {
+  border-bottom-width: 4px;
+  border-bottom-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease, border-bottom-width 0.1s ease, margin-bottom 0.1s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+}
+.btn-game:hover {
+  transform: translateY(-1px);
+}
+.btn-game:active {
+  transform: translateY(3px);
+  border-bottom-width: 1px;
+}
+
+.badge-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.badge-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg) translateX(-100%);
+  animation: shimmer 3.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(30deg) translateX(-100%);
+  }
+  20% {
+    transform: rotate(30deg) translateX(100%);
+  }
+  100% {
+    transform: rotate(30deg) translateX(100%);
+  }
+}
+
+.progress-glow {
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+.card-depth {
+  background-color: #0f172a; /* bg-slate-900 */
+  border: 1px solid rgba(30, 41, 59, 0.8); /* border-slate-800 */
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card-depth:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 25px -4px rgba(0, 0, 0, 0.6), 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+/* Custom Scrollbar for Bento theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+

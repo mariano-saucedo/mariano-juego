@@ -1,0 +1,6 @@
+{
+  "name": "EduQuest México",
+  "description": "Videojuego educativo multiplataforma e interactivo en español (México) con IA Tutor, mapa de niveles, misiones, logros y perfil de estudiante.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
